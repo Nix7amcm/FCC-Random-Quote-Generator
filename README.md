@@ -5,7 +5,33 @@ Build a Random Quote Machine
 
 ### My Solution:
 
-[My Solution - Deployed on Render.com](https://random-quote-machine-e5mj.onrender.com)
+[random-quote-machine-e5mj.onrender.com](https://random-quote-machine-e5mj.onrender.com)
+
+---
+
+### Images:
+
+#### <u>Desktop Light Mode</u>
+
+![Screenshot of page on desktop in light mode](project-solution-images/desktop-light.png "Desktop Light Mode")
+
+
+
+#### <u>Desktop Dark Mode</u>
+
+![Screenshot of page on desktop in dark mode](project-solution-images/desktop-dark.png "Desktop Dark Mode") 
+
+
+
+#### <u>Mobile Light Mode</u>
+
+![Screenshot of page on mobile in light mode](project-solution-images/mobile-light.png "Mobile Light Mode")
+
+
+
+#### <u>Mobile Dark Mode</u>
+
+![Screenshot of page on mobile in dark mode](project-solution-images/mobile-dark.png "Mobile Dark Mode")
 
 
 
@@ -68,7 +94,6 @@ You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and
   
 
 - [x] **User Story #11:** The `#quote-box` wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
-  
 
 ---
 
