@@ -5,7 +5,7 @@ Build a Random Quote Machine
 
 ### My Solution:
 
-[solution url here](solution-url-here)
+[add solution site url here once deployed](solution-url-here)
 
 
 

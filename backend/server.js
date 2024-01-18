@@ -29,8 +29,8 @@ app.get( '/quotes', async ( req, res ) => {
     const response = await axios.request( options );
     // >>> Ensure the data structure matches what's returned from the API:
     const quoteData = response.data[ 0 ]; //--- get the first object in the returned array
-    const quote = quoteData.text; //--- get the quote text
-    const author = quoteData.author; //--- get the quote author
+    const quote = quoteData.text; //--- get the quote
+    const author = quoteData.author; //--- get the author
     res.json( { text: quote, author: author } );
 
   } catch ( error ) {
