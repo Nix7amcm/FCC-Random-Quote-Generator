@@ -1,0 +1,13 @@
+/*### Custom quote-box Max Width ###*/
+.custom-max-w {  
+  max-width: 56.25rem;
+}
+
+/*### Custom Border ###*/
+/*!!! quote-box box-shadow are in App.css where variables are updated depending on dark/light mode !!!*/
+/*.....NB: Targeting by ID to ensure overridding Bootstrap's defaults */
+#quote-box {
+  /* border: 0.25rem solid #6b63b5; */ /*<--- replaced border with box-shadow */
+
+}
+

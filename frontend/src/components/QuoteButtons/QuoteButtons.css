@@ -1,0 +1,24 @@
+/*### Custom Button/Link Button ###*/
+/*!!! quote-buttons box-shadow styles are in App.css where variables are updated depending on dark/light mode !!!*/
+/*.....NB: Buttons are targeted by ID individually instead of combining them with .quote-buttons together to ensure overridding Bootstrap's defaults */
+
+#new-quote,
+#tweet-quote {
+  color: white;
+  background-color: #6b63b5;
+  border: none;
+}
+
+#new-quote:is(:hover, :focus-visible),
+#tweet-quote:is(:hover, :focus-visible) {
+  color: white;
+  background-color: #433c87;
+  filter: brightness(130%);
+}
+
+#new-quote:active,
+#tweet-quote:active {
+  color: white;
+  background-color: #433c87;
+  filter: brightness(90%);
+}

@@ -1,14 +1,16 @@
 import React from 'react';
 import './QuoteText.css';
 
-// +++ Receive the current quote as a prop from the QuoteBox component and display it +++ //
+// +++ Receives the current quote as a prop from the QuoteBox component and displays it +++ //
 
 const QuoteText = ( { quote } ) => {
 
   return (
 
-    <p id='text'>
-      {quote || 'Quote should appear here'}
+    <p id='text' className='quote-text text-center mb-0 fs-3 fw-light'>
+
+      "{quote || 'Quote should appear here'}"
+
     </p>
 
   );

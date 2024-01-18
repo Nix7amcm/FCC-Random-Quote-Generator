@@ -1,0 +1,101 @@
+/* +++
+  >>> This file contains the styles for the App component, which is the parent component of the entire application.
+  >>> It also contains :root CSS variables for the entire application, which are used to update the styles depending on dark/light mode:
+      --- quote-box box-shadow is applied to the QuoteBox component.
+      --- quote-buttons box-shadow is applied to the QuoteButtons component.
+      .....NB: The remaining styles for the QuoteBox & QuoteButtons components are in the QuoteBox.css & QuoteButtons.css files.
+      --- footer links (and other styles) are applied to the Footer in the App component.
+  >>> It also has the styles for the Dark/Light Mode toggle button situated in the App component.
++++ */
+
+/***** Root Variables *****/
+:root {
+  /*_____ quote-box box shadow _____*/
+  --box-shadow-light: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
+  --box-shadow-dark: #9d9dca40 0px 50px 100px -20px, #ffffff4d 0px 30px 60px -30px, #c8dff659 0px -2px 6px 0px inset;;
+  
+  /*_____ quote-buttons box shadow _____*/  
+  --quote-buttons-box-shadow-light: 2px 2px 10px -2px #31363877;  
+  --quote-buttons-box-shadow-dark: 2px 2px 10px -2px #c4c9cb77;
+
+  /*_____ footer link _____*/  
+  --footer-link-color-light: #6b63b5;
+  --footer-link-hover-color-light: #433c87;
+  --footer-link-active-color-light: #433c87;
+  --footer-link-visited-color-light: #9a4eae;
+  --footer-link-color-dark: #ff822e;
+  --footer-link-hover-color-dark: #ffee5a;
+  --footer-link-active-color-dark: #ffee5a;
+  --footer-link-visited-color-dark: #9a4eae;
+}
+
+/***** App *****/
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/*_____  App Custom Dark/Light Mode _____*/
+.App.light {
+  background-color: #f8f8ff;
+  color: #313638;
+}
+
+.App.dark {
+  background-color: #10141d;
+  color: #f8f8ff;
+}
+
+/***** Custom Dark/Light Toggle Button *****/
+#dk-lt-toggle-button {
+  color: #f8f8ff;
+  background-color: #6b63b5;
+  border: none;
+}
+
+#dk-lt-toggle-button:is(:hover, :focus-visible) {
+  color: #f8f8ff;
+  background-color: #433c87;
+}
+
+#dk-lt-toggle-button:active {
+  color: #f8f8ff;
+  background-color: #433c87;
+  filter: brightness(150%);
+}
+
+/***** Quote Box & Quote Buttons Box Shadows *****/
+.quote-box {
+  box-shadow: var(--box-shadow);
+}
+
+.quote-buttons {
+  box-shadow: var(--quote-buttons-box-shadow);
+}
+
+/***** Footer *****/
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--footer-link-color);
+}
+
+footer a:is(:hover, :focus-visible) {
+  color: var(--footer-link-hover-color);
+  text-decoration: underline;
+}
+
+footer a:active {
+  color: var(--footer-link-active-color);
+  filter: brightness(150%);
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: var(--footer-link-visited-color);
+  text-decoration: underline;
+}

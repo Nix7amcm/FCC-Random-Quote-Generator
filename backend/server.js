@@ -1,6 +1,6 @@
 const express = require( 'express' );
 const axios = require( 'axios' );
-require( 'dotenv' ).config();
+require( 'dotenv' ).config({ path: '../.env'});
 const cors = require( 'cors' );
 
 const app = express();
@@ -15,11 +15,11 @@ app.get( '/quotes', async ( req, res ) => {
     method: 'GET',
     url: 'https://famous-quotes4.p.rapidapi.com/random',
     params: {
-      category: 'wisdom',
+      category: 'motivational',
       count: '1'
     },
     headers: {
-      'X-RapidAPI-Key': process.env.API_KEY,
+      'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
       'X-RapidAPI-Host': 'famous-quotes4.p.rapidapi.com'
     }
   };

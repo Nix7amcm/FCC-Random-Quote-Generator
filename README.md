@@ -3,9 +3,15 @@ Build a Random Quote Machine
 
 
 
-**Note:** **React 18 has known incompatibilities with the tests for this project (see [issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/45922))**
+### My Solution:
+
+[solution url here](solution-url-here)
 
 
+
+---
+
+### Project Description:
 
 **Objective:** Build an app that is functionally similar to this: [https://random-quote-machine.freecodecamp.rocks/](https://random-quote-machine.freecodecamp.rocks/).
 
@@ -18,6 +24,8 @@ You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and
 
 
 ---
+
+### User Stories:
 
 - [x] **User Story #1:** I can see a wrapper element with a corresponding `id="quote-box"`.
   
@@ -59,11 +67,16 @@ You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and
   
   
 
-- [ ] **User Story #11:** The `#quote-box` wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
-  
+- [x] **User Story #11:** The `#quote-box` wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
   
 
 ---
+
+### Additional Notes:
+
+**Note:** **React 18 has known incompatibilities with the tests for this project (see [issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/45922))**
+
+
 
 You can build your project by [using this CodePen template](https://codepen.io/pen?template=MJjpwO) and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
@@ -76,7 +89,3 @@ Once you're done, submit the URL to your working project with all its tests pass
 
 
 * * *
-
-### My Solution:
-
-[solution url here](solution-url-here)
