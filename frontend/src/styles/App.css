@@ -11,15 +11,20 @@
 /***** Root Variables *****/
 :root {
   /*_____ quote-box box shadow _____*/
-  --box-shadow-light: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
-  --box-shadow-dark: #9d9dca40 0px 50px 100px -20px, #ffffff4d 0px 30px 60px -30px, #c8dff659 0px -2px 6px 0px inset;;
-  
-  /*_____ quote-buttons box shadow _____*/  
-  --quote-buttons-box-shadow-light: 2px 2px 10px -2px #31363877;  
-  --quote-buttons-box-shadow-dark: 2px 2px 10px -2px #c4c9cb77;
+  --box-shadow-light: #32325d40 0px 50px 100px -20px,
+    #0000004d 0px 30px 60px -30px,
+    #0a254059 0px -2px 6px 0px inset;
+  --box-shadow-dark: #9d9dca40 0px 50px 100px -20px,
+    #ffffff4d 0px 30px 60px -30px,
+    #c8dff659 0px -2px 6px 0px inset;
+  ;
 
-  /*_____ footer link _____*/  
-  --footer-link-color-light: #6b63b5;
+  /*_____ quote-buttons box shadow _____*/
+  --quote-buttons-box-shadow-light: 3px 3px 2px -1px #31363877;
+  --quote-buttons-box-shadow-dark: 3px 3px 2px -1px #c4c9cb77;
+
+  /*_____ footer link _____*/
+  --footer-link-color-light: #ff822e;
   --footer-link-hover-color-light: #433c87;
   --footer-link-active-color-light: #433c87;
   --footer-link-visited-color-light: #9a4eae;
@@ -78,10 +83,15 @@
 }
 
 /***** Footer *****/
+footer {
+  font-family: "Source Code Pro", monospace;
+}
+
 footer a {
-  text-decoration: none;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: var(--footer-link-color);
+  text-shadow: 1px 0.5px 0px #313638;
+  text-decoration: none;
 }
 
 footer a:is(:hover, :focus-visible) {
@@ -92,10 +102,9 @@ footer a:is(:hover, :focus-visible) {
 footer a:active {
   color: var(--footer-link-active-color);
   filter: brightness(150%);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 footer a:visited {
   color: var(--footer-link-visited-color);
-  text-decoration: underline;
 }

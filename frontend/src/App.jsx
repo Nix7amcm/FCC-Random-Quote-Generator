@@ -5,8 +5,9 @@ import './styles/App.css';
 import backendURL from './backendURL';
 
 // +++ This is the parent App component that renders the entire app +++ //
-  // >>> It renders the QuoteBox component, which seperately renders the QuoteText, QuoteAuthor, and QuoteButtons components
-  // >>> It also renders the dark/light mode toggle button and the footer
+// >>> It renders the QuoteBox component, which seperately renders the QuoteText, QuoteAuthor, and QuoteButtons components
+// >>> It also renders the dark/light mode toggle button and the footer
+// >>> It passes the loading state to the QuoteText component which renders a spinner while the data is being fetched from the backend
 
 function App () {
 
@@ -14,6 +15,7 @@ function App () {
   const [ quote, setQuote ] = useState( '' );
   const [ author, setAuthor ] = useState( '' );
   const [ darkMode, setDarkMode ] = useState( false );
+  const [ loading, setLoading ] = useState( true );
 
   //_____ Check if values are being received from server:
   /* useEffect(() => {
@@ -27,10 +29,12 @@ function App () {
 
   //_____ Function to fetch a new quote from the backend:
   const fetchQuote = async () => {
+    setLoading( true );
     try {
       const res = await axios.get( backendURL + '/quotes' );
       setQuote( res.data.text );
       setAuthor( res.data.author );
+      setLoading( false );
     } catch ( error ) {
       console.error( error );
     }
@@ -45,7 +49,7 @@ function App () {
   useEffect( () => {
     //--- quote-box box-shadow
     document.documentElement.style.setProperty( '--box-shadow', darkMode ? 'var(--box-shadow-dark)' : 'var(--box-shadow-light)' );
-    
+
     //--- quote-buttons box-shadow
     document.documentElement.style.setProperty( '--quote-buttons-box-shadow', darkMode ? 'var(--quote-buttons-box-shadow-dark)' : 'var(--quote-buttons-box-shadow-light)' );
 
@@ -80,7 +84,7 @@ function App () {
 
         </button>
 
-        <QuoteBox quote={quote} author={author} newQuote={fetchQuote} />
+        <QuoteBox quote={quote} author={author} newQuote={fetchQuote} loading={loading} />
 
       </div>
 
